@@ -8,7 +8,7 @@ public class DAO implements iDAO{
 
     @Override
     public void create(Orador newOrador) throws Exception {
-        
+        System.out.println("ASD");
     }
 
     @Override

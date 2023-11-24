@@ -1,0 +1,21 @@
+/***********************************/
+/************ Login ****************/
+/***********************************/
+
+.login{
+    padding-top: 100px;
+    height: 76.8vh;
+    width: 450px!important;
+}
+.form-control{
+    border: none;
+    border-bottom: 2px solid #CCC;
+}
+.form-control:hover{
+    border-bottom: 2px solid #198754;
+    
+}
+.form-control:focus{
+    border-bottom: 2px solid #198754;
+    box-shadow: 0 1px 1px #198754 inset, 0 0 8px #198754;
+}

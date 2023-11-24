@@ -6,9 +6,10 @@
     font-size: 16px;
 }
 :root{
-    --color-primary: #333a40!important;
-    --color-footer: #1d3c4e!important;
-    --color-white: #F1F1F1!important;
+    --color-primary: #333a40;
+    --color-footer: #1d3c4e;
+    --color-white: #F1F1F1;
+    --color-green-primary: #198754;
 }
 
 *::selection{
@@ -39,13 +40,18 @@ header span{
     height: 80px;
 }
 .btn-prim{
-    color: #198754!important;
+    color: var(--color-green-primary)!important;
     text-shadow: 0px 0px 1px #CCC7, 0px 0px 12px #000;
+    border-radius: 10px;
+    transition: border .2s ease-in;
+}
+.btn-prim::befor{
+    border-radius: 10px;
+    
 }
 .btn-prim:hover{
     color: var(--color-white)!important;
     background-color: #198754;
-    border-radius: 10px;
 }
 
 
@@ -138,6 +144,7 @@ header span{
 
 footer{
     background: var(--color-footer);
+    position: static;
 }
 footer div, footer a{
     color: var(--color-white);

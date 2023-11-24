@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferencia CodoACodo</title>
     <link rel="shortcut icon" href="img/codoacodo-min.png">
-    <link href="css/index.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    </head>
 <body>
     
     <jsp:include page="components/header.jsp"/>
@@ -16,23 +17,24 @@
     <main class="d-flex justify-content-center align-items-center">
 		 <section class="mt-5 container" id="form-orador">
 		        <div class="row justify-content-center">
-		            <div class="col-lg-8 col-xl-7 mt-">
-		                <h2 class="titulo-gral mb-3">LogIn</h2>
+		            <div class="col-lg-8 col-xl-7 login">
+		                <div class="div-title">
+                                    <h3>Ingresá al sistema de<span>ORADORES</span></h3>
+                                </div>
 		                
 		                <form action="<%=request.getContextPath()%>/LoginAdminController" method="POST">
+		                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+                                        <label for="floatingInput">Correo electronico</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="contraseña">
+                                        <label for="floatingPassword">Contrase&ntildea</label>
+                                    </div>
 		                    <div class="row justify-content-center">
-		                        <div class="col-8 mb-3 mb-4">
-		                            <input type="text" class="form-control" name="nombre" placeholder="Usuario" aria-label="Nombre" required>
-		                            
-		                        </div>
-		                         <div class="col-8 mb-3 mb-4">
-		                           <input type="password" class="form-control" name="password" placeholder="Contraseña" aria-label="Password" required>
-		                         </div>
-		                    </div>
-		                    <div class="row justify-content-center">
-		                        <div class="col-8 mb-3">
+		                        <div class="col-8 mt-3">
 		                            <div class="d-grid">
-		                                <button type="submit" class="btn btn-lg btn-form">LogIn</button>
+		                                <button type="submit" class="btn btn-lg btn-success ms-2">Ingresar</button>
 		                            </div>
 		                        </div>
 		                    </div>
