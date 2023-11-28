@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +9,7 @@
         <link rel="shortcut icon" href="img/codoacodo-min.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="css/index.css" rel="stylesheet">
+        <link href="css/input-form.css" rel="stylesheet">
     </head>
     <body>
         
@@ -106,47 +106,51 @@
 
             <section id="oradores" class="m-4">
 
-              <div class="div-title">
-                <h3>CONOCÉ A LOS <span>ORADORES</span></h3>
-              </div>
-
-              <div class="cards d-flex flex-row justify-content-center">
-                <div class="row">
-                  <div class="col d-flex flex-row justify-content-center g-4">
-                    <div class="card shadow" style="width: 16rem;">
-                      <img src="img/steve-min.jpg" class="card-img-top img-max-height" alt="Steve Jobs presentando iPhone" style="height: 15.8rem;">
-                      <div class="card-body">
-                        <span class="badge text-bg-warning">JavaScript</span>
-                        <span class="badge text-bg-info">React</span>
-                        <h5 class="card-title pt-2">Steve Jobs</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et aspernatur, sit dolorem officiis dolor, nobis sed labore non culpa dignissimos amet excepturi odit quis quos temporibus ut asperiores possimus. Veniam!</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col d-flex flex-row justify-content-center g-4">
-                    <div class="card shadow" style="width: 16rem;">
-                      <img src="img/bill-min.jpg" class="card-img-top img-max-height" alt="Bill Gates en conferencia">
-                      <div class="card-body">
-                        <span class="badge text-bg-warning">JavaScript</span>
-                        <span class="badge text-bg-info">React</span>
-                        <h5 class="card-title pt-2">Bill Gates</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, nostrum saepe et quaerat illo possimus provident laboriosam totam sunt magni recusandae eligendi optio earum quas ab omnis fuga molestiae corrupti.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col d-flex flex-row justify-content-center g-4">
-                    <div class="card shadow" style="width: 16rem;">
-                      <img src="img/ada-min.jpeg" class="card-img-top img-max-height" alt="Retrato de Ada Lovelace en blanco y negro">
-                      <div class="card-body">
-                        <span class="badge text-bg-secondary">Negocios</span>
-                        <span class="badge text-bg-danger">Startups</span>
-                        <h5 class="card-title pt-2">Ada Lovelace</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, veniam eius excepturi sapiente eligendi quaerat soluta nihil iste vero sequi cum nam quibusdam quam voluptas consequuntur natus! Optio, perspiciatis velit.</p>
-                      </div>
-                    </div>
-                  </div>
+                <div class="div-title">
+                    <h3>CONOCÉ A LOS <span>ORADORES</span></h3>
                 </div>
-              </div>
+
+                <div class="cards d-flex flex-row justify-content-center">
+                    <div class="row">
+                        <div class="col d-flex flex-row justify-content-center g-4">
+                            <div class="card shadow" style="width: 16rem;">
+                                <img src="img/steve-min.jpg" class="card-img-top img-max-height" alt="Steve Jobs presentando iPhone" style="height: 15.8rem;">
+                                <div class="card-body">
+                                    <span class="badge text-bg-warning">JavaScript</span>
+                                    <span class="badge text-bg-info">React</span>
+                                    <h5 class="card-title pt-2">Steve Jobs</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et aspernatur, sit dolorem officiis dolor, nobis sed labore non culpa dignissimos amet excepturi odit quis quos temporibus ut asperiores possimus. Veniam!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-row justify-content-center g-4">
+                            <div class="card shadow" style="width: 16rem;">
+                                <img src="img/bill-min.jpg" class="card-img-top img-max-height" alt="Bill Gates en conferencia">
+                                <div class="card-body">
+                                    <span class="badge text-bg-warning">JavaScript</span>
+                                    <span class="badge text-bg-info">React</span>
+                                    <h5 class="card-title pt-2">Bill Gates</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, nostrum saepe et quaerat illo possimus provident laboriosam totam sunt magni recusandae eligendi optio earum quas ab omnis fuga molestiae corrupti.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-row justify-content-center g-4">
+                            <div class="card shadow" style="width: 16rem;">
+                                <img src="img/ada-min.jpeg" class="card-img-top img-max-height" alt="Retrato de Ada Lovelace en blanco y negro">
+                                <div class="card-body">
+                                    <span class="badge text-bg-secondary">Negocios</span>
+                                    <span class="badge text-bg-danger">Startups</span>
+                                    <h5 class="card-title pt-2">Ada Lovelace</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, veniam eius excepturi sapiente eligendi quaerat soluta nihil iste vero sequi cum nam quibusdam quam voluptas consequuntur natus! Optio, perspiciatis velit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="container mb-4 mt-4 text-center" id="restoOradores">
+                    <a class="btn btn-outline-success shadow" href="<%=request.getContextPath()%>/FindAllOradorController">Conoce al resto de los ORADORES</a>
+                </div>
 
             </section>
 
@@ -175,7 +179,7 @@
                   <div class="div-title">
                     <h3>CONVIÉRTETE EN UN <span>ORADOR</span></h3>
                   </div>
-                  <form class="needs-validation" novalidate="">
+                  <form class="needs-validation" novalidate="" action="<%=request.getContextPath()%>/CreateOradorController" method="POST">
                     <div class="row g-3">
                       <div class="col-md-6">
                         <label for="firstName" class="form-label">Nombre</label>
@@ -203,7 +207,7 @@
 
                       <div class="col-12">
                         <label for="address" class="form-label">Cuéntanos de qué quieres hablar</label>
-                        <textarea type="textarea" class="form-control" id="address" placeholder="#Titulo
+                        <textarea class="form-control" id="address" placeholder="#Titulo
                         Hola, que tal..." required="" style="height: 100px"></textarea>
                         <div class="invalid-feedback">
                           No te olvides de completar los campos.

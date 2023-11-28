@@ -27,8 +27,8 @@ public class FindAllOradorController  extends HttpServlet {
         } catch (Exception e) {
           e.printStackTrace(); 
         }
-        req.setAttribute("listado", oradores);
-        getServletContext().getRequestDispatcher("/listado.jsp").forward(req, resp);
+        req.setAttribute("listadoOradores", oradores);
+        getServletContext().getRequestDispatcher("/listadoOradores.jsp").forward(req, resp);
 
     }
         

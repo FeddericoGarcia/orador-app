@@ -18,7 +18,7 @@ public class DashboardOradorController extends HttpServlet  {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        iDAO dao = DAO();
+        iDAO dao = new DAO();
         List<Orador> lista = new ArrayList<>();
         
         try{

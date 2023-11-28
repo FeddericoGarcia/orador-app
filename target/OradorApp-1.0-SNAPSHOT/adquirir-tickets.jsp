@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="img/codoacodo-min.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="css/index.css" rel="stylesheet">
+        <link href="css/input-form.css" rel="stylesheet">
     </head>
     <body>
 
@@ -17,7 +18,7 @@
 
           <section class="container-fluid pt-5 d-flex justify-content-center" id="comprar-tkt">
 
-            <div class="row mt-5 g-4 col-lg-8 col-xl-7">
+            <div class="row mt-5 g-4 col-sm-4 col-lg-8 col-xl-7">
 
               <div class="cards d-flex justify-content-center">
 

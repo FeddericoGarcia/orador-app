@@ -101,6 +101,9 @@ header span{
 .card-divisor .card{
     border: none!important;
 }
+.card-divisor .row:first-child{
+    background: var(--color-primary);
+}
 .card-d .card-body{
     color: var(--color-white);
 }
@@ -111,10 +114,13 @@ header span{
 .card-d a{
     font-size: .8em;
 }
-
+@media screen and (max-width: 767px){
+    .card-d{
+        max-width: 100%;
+        background: var(--color-primary);
+    }
+}
 /*** .img-fluid  in 1052px the image breaks*/
-
-
 
 
 /***** CARDS ADQUIRIR TICKETS ****/
