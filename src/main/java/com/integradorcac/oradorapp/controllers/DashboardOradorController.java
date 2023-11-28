@@ -16,7 +16,7 @@ import java.util.List;
 public class DashboardOradorController extends HttpServlet  {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         iDAO dao = DAO;
         List<Orador> lista = new ArrayList<>();
         
@@ -31,8 +31,8 @@ public class DashboardOradorController extends HttpServlet  {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp); 
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp); 
     }
     
 }
