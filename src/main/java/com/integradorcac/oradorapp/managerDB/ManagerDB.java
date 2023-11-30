@@ -20,7 +20,7 @@ public class ManagerDB {
             Class.forName(driveDB);
             conn = DriverManager.getConnection(url, user, pass);
             System.out.println("*********************");
-            System.out.println("Conexión exitosa con Database");
+            System.out.println("Conexion exitosa con Database");
         }catch(Exception e){
             System.out.println("*********************");
             System.out.println("Se detecto un error en class ManagerDB");

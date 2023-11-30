@@ -1,3 +1,9 @@
+<%@page import="com.integradorcac.oradorapp.entity.Orador"%>
+<%@page import="java.util.List"%>
+<%@page import="java.lang.Iterable"%>
+
+<% Orador orador = (Orador)request.getAttribute("orador"); %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,34 +33,22 @@
                         <th scope="col">Tema</th>
                       </tr>
                     </thead>
-                     <% 
-                                            //codigo java
-                                            //obtener el listado desde el request
-                                            //se guardo bajo el nombre de "listado"
-                                            List<Orador> listado = (List<Orador>)request.getAttribute("listado");
-                                     %>
                     <tbody>
-                             <!-- ESTO SE REPITE TANTA CANDTIDAD DE VECES COMO ARTICULOS TENGA -->
-                                       <%
-                                            for( Orador  unOrador : listado) {
-                                       %>
-                      <tr>
+                    <% for( Orador  unOrador : orador) { %>
+                    <tr>
                         <th scope="row"><%=unOrador.getId()%></th>
                         <td><%=unOrador.getNombre() %></td>
                         <td><%=unOrador.getApellido() %></td>
                         <td><%=unOrador.getTema() %></td>
                         <td><a class="btn btn-info" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id=<%=unOrador.getId()%>">
-                                                   Editar
-                                                </a> | 
-                                            <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOradorId(<%=unOrador.getId()%>)">
-                                                      Eliminar
-                                                    </button>
-                                              </td>
-                      </tr>
-                       <%
-                                            }
-                                       %>
+                                Editar
+                            </a> | 
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOradorId(<%=unOrador.getId()%>)">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                       <% } %>
                     </tbody>
                   </table>
             </div>

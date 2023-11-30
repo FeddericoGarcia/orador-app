@@ -2,7 +2,7 @@ package com.integradorcac.oradorapp.controllers;
 
 import com.integradorcac.oradorapp.dao.iDAO;
 import com.integradorcac.oradorapp.dao.implement.DAO;
-import entity.Orador;
+import com.integradorcac.oradorapp.entity.Orador;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -31,7 +31,7 @@ public class FindAllOradorController  extends HttpServlet {
             System.out.println("**************");
             System.out.println("Se detecto error en FindAllOradorController.java");
         }
-        req.setAttribute("listadoOradores", oradores);
+        req.setAttribute("id_oradores", oradores);
         getServletContext().getRequestDispatcher("/listadoOradores.jsp").forward(req, resp);
 
     }

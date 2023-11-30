@@ -1,4 +1,4 @@
-<%@page import="entity.Orador"%>
+<%@page import="com.integradorcac.oradorapp.entity.Orador"%>
 <%@page import="java.util.List"%>
 
 <!DOCTYPE html>
@@ -46,6 +46,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>
+                                <th scope="col">Email</th>
                                 <th scope="col">Tema</th>
                             </tr>
                         </thead>
@@ -57,6 +58,7 @@
                                     <th scope="row"><%=orador.getId()%></th>
                                     <td><%=orador.getNombre() %></td>
                                     <td><%=orador.getApellido() %></td>
+                                    <td><%=orador.getMail() %></td>
                                     <td><%=orador.getTema() %></td>
                                 </tr>
                                 <% } %>

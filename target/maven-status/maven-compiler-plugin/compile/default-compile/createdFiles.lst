@@ -6,7 +6,7 @@ com\integradorcac\oradorapp\dao\iDAO.class
 com\integradorcac\oradorapp\controllers\DashboardOradorController.class
 com\integradorcac\oradorapp\controllers\FindAllOradorController.class
 com\integradorcac\oradorapp\resources\JakartaEE10Resource.class
+com\integradorcac\oradorapp\entity\Orador.class
 com\integradorcac\oradorapp\managerDB\ManagerDB.class
 com\integradorcac\oradorapp\dao\implement\DAO.class
 com\integradorcac\oradorapp\controllers\DeleteOradorController.class
-entity\Orador.class

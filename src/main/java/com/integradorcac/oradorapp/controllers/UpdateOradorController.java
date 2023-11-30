@@ -2,8 +2,7 @@ package com.integradorcac.oradorapp.controllers;
 
 import com.integradorcac.oradorapp.dao.iDAO;
 import com.integradorcac.oradorapp.dao.implement.DAO;
-
-import entity.Orador;
+import com.integradorcac.oradorapp.entity.Orador;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class UpdateOradorController extends HttpServlet {
         String id = req.getParameter("id");
         String nombre= req.getParameter("nombre");
         String apellido = req.getParameter("apellido");
-        String mail = req.getParameter("mail");
+        String mail = req.getParameter("email");
         String tema = req.getParameter("tema");
 
         List<String> errores = new ArrayList<>();
@@ -40,7 +39,7 @@ public class UpdateOradorController extends HttpServlet {
             errores.add("Tema vacío");
         }
         if(!errores.isEmpty()) {
-            req.setAttribute("errores", errores);
+            req.setAttribute("error", errores);
             getServletContext().getRequestDispatcher("/dashboard.jsp").forward(req, resp);
             return;
         }
@@ -50,7 +49,7 @@ public class UpdateOradorController extends HttpServlet {
         
         try { 
             dao.update(orador);
-            req.setAttribute("exitoso", List.of("Orador id:" + orador.getId() + " actualizado correctamente"));
+            req.setAttribute("orador", List.of("Orador id:" + orador.getId() + " actualizado correctamente"));
         } catch (Exception e) {
             e.printStackTrace();
             req.setAttribute("error", List.of("Error actualizando Orador<" + e.getMessage()));
@@ -65,9 +64,12 @@ public class UpdateOradorController extends HttpServlet {
         Orador orador = null;
 
         try {
-                orador = dao.findById(Long.parseLong(id));
+            orador = dao.findById(Long.parseLong(id));
+            System.out.println("OK UpdateOradorController.java");
         } catch (Exception e) {
-                e.printStackTrace();
+            System.out.println("**********");
+            e.printStackTrace();
+            System.out.println("Se detecto error en UpdateOradorController.java");
         }
 
         req.setAttribute("orador", orador);

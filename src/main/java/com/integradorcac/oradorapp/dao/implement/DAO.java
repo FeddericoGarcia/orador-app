@@ -1,8 +1,9 @@
 package com.integradorcac.oradorapp.dao.implement;
 
 import com.integradorcac.oradorapp.dao.iDAO;
+import com.integradorcac.oradorapp.entity.Orador;
 import com.integradorcac.oradorapp.managerDB.ManagerDB;
-import entity.Orador;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
@@ -38,7 +39,7 @@ public class DAO implements iDAO{
     @Override
     public void update(Orador orador) throws Exception {
         Connection connection = ManagerDB.getConnection();
-        String sql = "update oradores set nombre = ?, apellido = ?, mail = ?, tema = ? where id_orador= ?";
+        String sql = "update oradores set nombre = ?, apellido = ?, email = ?, tema = ? where id_orador= ?";
         PreparedStatement statement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
         
         statement.setString(1,orador.getNombre());
@@ -63,7 +64,7 @@ public class DAO implements iDAO{
             Long id_orador = rSet.getLong("id_orador");
             name = rSet.getString("nombre");
             lastname = rSet.getString("apellido");
-            email = rSet.getString("mail");
+            email = rSet.getString("email");
             topic = rSet.getString("tema");
             
             Orador orador = new Orador(id_orador, name, lastname, email, topic);
@@ -104,10 +105,10 @@ public class DAO implements iDAO{
             Long id = rSet.getLong("id_orador");
             String nombre = rSet.getString("nombre");
             String apellido = rSet.getString("apellido");
-            String mail = rSet.getString("mail");
+            String email = rSet.getString("email");
             String tema = rSet.getString("tema");
             
-            Orador ora = new Orador(id, nombre, apellido, mail, tema);
+            Orador ora = new Orador(id, nombre, apellido, email, tema);
             lista.add(ora);
             
         }
@@ -152,7 +153,7 @@ public class DAO implements iDAO{
         Long id = rSet.getLong("id_orador");
         String nombre = rSet.getString("nombre");
         String apellido = rSet.getString("apellido");
-        String mail = rSet.getString("mail");
+        String mail = rSet.getString("email");
         String tema = rSet.getString("tema");
         
         return new Orador(id, nombre, apellido, mail, tema);

@@ -1,6 +1,7 @@
 package com.integradorcac.oradorapp.dao;
 
-import entity.Orador;
+import com.integradorcac.oradorapp.entity.Orador;
+
 import java.util.List;
 
 public interface iDAO {

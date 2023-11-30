@@ -1,5 +1,4 @@
-
-package entity;
+package com.integradorcac.oradorapp.entity;
 
 public class Orador {
     private Long id;

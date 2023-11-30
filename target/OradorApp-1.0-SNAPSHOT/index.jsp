@@ -148,7 +148,7 @@
                     </div>
                 </div>
             
-                <div class="container mb-4 mt-4 text-center" id="restoOradores">
+                <div class="container mb-4 mt-4 text-center" id="listado">
                     <a class="btn btn-outline-success shadow" href="<%=request.getContextPath()%>/FindAllOradorController">Conoce al resto de los ORADORES</a>
                 </div>
 

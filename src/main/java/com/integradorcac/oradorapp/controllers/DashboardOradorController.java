@@ -3,7 +3,7 @@ package com.integradorcac.oradorapp.controllers;
 import com.integradorcac.oradorapp.dao.iDAO;
 import com.integradorcac.oradorapp.dao.implement.DAO;
 
-import entity.Orador;
+import com.integradorcac.oradorapp.entity.Orador;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
