@@ -10,22 +10,23 @@ public class ManagerDB {
         String host = "localhost";
         String port = "3306";
         String user = "root";
-        String pass = "123";
+        String pass = "root";
         String database = "integrador_cac";
-        String timeZone = "?serverTimeZone=UTC";
+        String timeZone = "?serverTimezone=UTC";
         String url ="jdbc:mysql://"+host+":"+port+"/"+database+timeZone;
         String driveDB = "com.mysql.cj.jdbc.Driver";
         
         try {
             Class.forName(driveDB);
             conn = DriverManager.getConnection(url, user, pass);
-            
+            System.out.println("*********************");
+            System.out.println("Conexión exitosa con Database");
         }catch(Exception e){
             System.out.println("*********************");
             System.out.println("Se detecto un error en class ManagerDB");
-            System.out.println(e.getMessage());
-            System.out.println(e.getLocalizedMessage());
-            
+            e.getLocalizedMessage();
+            e.printStackTrace();
+            System.out.println("*********************");
             conn = null;
         }
         return conn;

@@ -23,9 +23,13 @@ public class FindAllOradorController  extends HttpServlet {
         List<Orador> oradores = new ArrayList<>();
 
         try {
-          oradores = dao.findAll();
+            oradores = dao.findAll();
         } catch (Exception e) {
-          e.printStackTrace(); 
+            e.printStackTrace(); 
+            e.getMessage();
+            e.getStackTrace();
+            System.out.println("**************");
+            System.out.println("Se detecto error en FindAllOradorController.java");
         }
         req.setAttribute("listadoOradores", oradores);
         getServletContext().getRequestDispatcher("/listadoOradores.jsp").forward(req, resp);

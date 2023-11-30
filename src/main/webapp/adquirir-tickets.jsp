@@ -18,50 +18,51 @@
 
           <section class="container-fluid pt-5 d-flex justify-content-center" id="comprar-tkt">
 
-            <div class="row mt-5 g-4 col-sm-4 col-lg-8 col-xl-7">
+            <div class="row mt-5 g-4 justify-content-center">
+                <div class="col-sm-1 col-lg-8 col-xl-7">
+                    <div class="cards-at d-flex justify-content-center">
 
-              <div class="cards d-flex justify-content-center">
+                      <div class="col">
+                        <div class="card bg-danger border-danger mb-3 shadow m-2">
+                          <div class="card-header text-white h4 p-3">Estudiante</div>
+                          <div class="card-body rounded-bottom">
+                            <p>Tienes un descuento del</p>
+                            <h3 class="card-title">80%</h3>
+                            <small>
+                              <p class="card-text text-muted">* Presentar documentación</p>
+                            </small>
+                          </div>
+                        </div>
+                      </div>
 
-                <div class="col">
-                  <div class="card bg-danger border-danger mb-3 shadow m-2">
-                    <div class="card-header text-white h4 p-3">Estudiante</div>
-                    <div class="card-body rounded-bottom">
-                      <p>Tienes un descuento del</p>
-                      <h3 class="card-title">80%</h3>
-                      <small>
-                        <p class="card-text text-muted">* Presentar documentación</p>
-                      </small>
+                      <div class="col">
+                        <div class="card bg-warning border-warning mb-3 shadow m-2">
+                          <div class="card-header text-white h4 p-3">Trainee</div>
+                          <div class="card-body rounded-bottom">
+                            <p>Tienes un descuento del</p>
+                            <h3 class="card-title">50%</h3>
+                            <small>
+                              <p class="card-text text-muted">* Presentar documentación</p>
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="card bg-primary border-primary mb-3 shadow m-2">
+                          <div class="card-header text-white h4 p-3">Junior</div>
+                          <div class="card-body rounded-bottom">
+                            <p>Tienes un descuento del</p>
+                            <h3 class="card-title">15%</h3>
+                            <small>
+                              <p class="card-text text-muted">* Presentar documentación</p>
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                        
                     </div>
-                  </div>
                 </div>
-
-                <div class="col">
-                  <div class="card bg-warning border-warning mb-3 shadow m-2">
-                    <div class="card-header text-white h4 p-3">Trainee</div>
-                    <div class="card-body rounded-bottom">
-                      <p>Tienes un descuento del</p>
-                      <h3 class="card-title">50%</h3>
-                      <small>
-                        <p class="card-text text-muted">* Presentar documentación</p>
-                      </small>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card bg-primary border-primary mb-3 shadow m-2">
-                    <div class="card-header text-white h4 p-3">Junior</div>
-                    <div class="card-body rounded-bottom">
-                      <p>Tienes un descuento del</p>
-                      <h3 class="card-title">15%</h3>
-                      <small>
-                        <p class="card-text text-muted">* Presentar documentación</p>
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
 
           </section>
@@ -137,7 +138,12 @@
                         <button class="w-100 btn btn-success btn-lg" type="button" 
                         id="btn_resm">Resumen</button>  
                       </div>
+                       
                     </div>    
+                    <div class="col-md-12 w-100">
+                      <button class="w-100 btn btn-success btn-lg" type="submit" 
+                      id="btn_resm">Comprar</button>  
+                    </div>
                   </div>            
                 </form>
               </div>

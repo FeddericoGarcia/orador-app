@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 990px){
     .btn-prim:hover{
-        max-width: 110px!important;
+        max-width: 115px!important;
     }
 }
 
@@ -131,25 +131,23 @@ header span{
 .bg-danger>.card-body, .bg-primary>.card-body, .bg-warning>.card-body{
     background-color: #FFF!important;
 }
-
-
-/***** FORM TICKETS ****/
-.btn-group{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.cards-at>.col .card{
+    max-width: 220px;
+    width: 200px;
 }
-.btn-group div{
-    width: 50%!important;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
+@media screen and (max-width: 673px){
+    .cards-at{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
 }
-
 
 /***** FOOTER ****/
 
 footer{
-    background: var(--color-footer);
+    background: var(--color-footer)!important;
     position: static;
 }
 footer div, footer a{
