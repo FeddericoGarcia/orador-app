@@ -1,7 +1,7 @@
 <%@page import="com.integradorcac.oradorapp.entity.Orador"%>
 <%@page import="java.util.List"%>
 
-<% Orador orador = (Orador)request.getAttribute("oradores"); %>
+<% Orador orador = (Orador)request.getAttribute("orador"); %>
 
 <!doctype html>
 <html lang="es">

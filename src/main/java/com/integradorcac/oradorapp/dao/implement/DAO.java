@@ -18,7 +18,7 @@ public class DAO implements iDAO{
     public void create(Orador newOrador) throws Exception {
 
         Connection connection = ManagerDB.getConnection();
-        String sql = "insert into oradores (name, lastname, email, topic) value (?, ?, ?, ?)";
+        String sql = "insert into oradores (nombre, apellido, email, tema) value (?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
         
         statement.setString(1,newOrador.getNombre());

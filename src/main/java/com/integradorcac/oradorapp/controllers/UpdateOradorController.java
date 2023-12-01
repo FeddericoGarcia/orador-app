@@ -53,6 +53,8 @@ public class UpdateOradorController extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
             req.setAttribute("error", List.of("Error actualizando Orador<" + e.getMessage()));
+            System.out.println("*************");
+            System.out.println("Se detecto un error en doPost UpdateOradorController.java");
         }
 
         getServletContext().getRequestDispatcher("/DashboardOradorController").forward(req, resp);
@@ -67,9 +69,9 @@ public class UpdateOradorController extends HttpServlet {
             orador = dao.findById(Long.parseLong(id));
             System.out.println("OK UpdateOradorController.java");
         } catch (Exception e) {
-            System.out.println("**********");
             e.printStackTrace();
-            System.out.println("Se detecto error en UpdateOradorController.java");
+            System.out.println("*************");
+            System.out.println("Se detecto un error en doGet UpdateOradorController.java");
         }
 
         req.setAttribute("orador", orador);

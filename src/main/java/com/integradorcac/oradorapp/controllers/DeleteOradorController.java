@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class DeleteOradorController extends HttpServlet{
         
         try{
             dao.delete(id_orador);
-            req.setAttribute("Exitoso", List.of("Se elimino el orador ID: "+ id_orador + " ✔"));
+            req.setAttribute("success", List.of("Se elimino el orador ID: "+ id_orador + " ✔"));
            
         }catch(Exception e){
             System.out.println("❌ Surgió un error al eliminar orador ID " + id_orador + " ❌");

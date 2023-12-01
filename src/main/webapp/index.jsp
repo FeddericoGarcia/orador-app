@@ -183,7 +183,7 @@
                     <div class="row g-3">
                       <div class="col-md-6">
                         <label for="firstName" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="Pepe, Rosalia ..." value="" required="">
+                        <input type="text" class="form-control" name="nombre" id="firstName" placeholder="Pepe, Rosalia ..." value="" required="">
                         <div class="invalid-feedback">
                           No te olvides de completar los campos.
                         </div>
@@ -191,7 +191,7 @@
 
                       <div class="col-md-6">
                         <label for="lastName" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Gomez, Lopez ..." value="" required="">
+                        <input type="text" class="form-control" name="apellido" id="lastName" placeholder="Gomez, Lopez ..." value="" required="">
                         <div class="invalid-feedback">
                           No te olvides de completar los campos.
                         </div>
@@ -199,7 +199,7 @@
 
                       <div class="col-12">
                         <label for="email" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="ejemplo@gmail.com">
                         <div class="invalid-feedback">
                           No te olvides de completar los campos.
                         </div>
@@ -207,7 +207,7 @@
 
                       <div class="col-12">
                         <label for="address" class="form-label">Cuéntanos de qué quieres hablar</label>
-                        <textarea class="form-control" id="address" placeholder="#Titulo
+                        <textarea class="form-control" name="tema" id="address" placeholder="#Titulo
                         Hola, que tal..." required="" style="height: 100px"></textarea>
                         <div class="invalid-feedback">
                           No te olvides de completar los campos.
