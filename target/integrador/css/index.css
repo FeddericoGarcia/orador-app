@@ -159,8 +159,7 @@ header span{
 
 /***** CONFIG LISTADO ORADORES JSP *****/
 #restoOradores{
-    height: 100vh;
-    width: 100vw;
+    padding-top: 60px;
 }
 
 /***** FOOTER ****/
