@@ -2,8 +2,6 @@
 <%@page import="java.util.List"%>
 <%@page import="java.lang.Iterable"%>
 
-<% Orador orador = (Orador)request.getAttribute("orador"); %>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,6 +12,26 @@
     <link rel="shortcut icon" href="img/codoacodo-min.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/index.css" rel="stylesheet">
+    <style>
+        body{
+            height:100vh;
+            display: grid;
+            grid-template-rows: 10% 75% 15%;
+            grid-template-areas: "header"
+                                 "main"
+                                 "footer";  
+        }
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+            overflow: auto;
+        }
+        footer{
+            grid-area: footer;
+        }
+    </style>
 </head>
 <body>
     
@@ -34,20 +52,22 @@
                       </tr>
                     </thead>
                     <tbody>
-                    <% for( Orador  unOrador : orador) { %>
-                    <tr>
-                        <th scope="row"><%=unOrador.getId()%></th>
-                        <td><%=unOrador.getNombre() %></td>
-                        <td><%=unOrador.getApellido() %></td>
-                        <td><%=unOrador.getTema() %></td>
-                        <td><a class="btn btn-info" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id=<%=unOrador.getId()%>">
-                                Editar
-                            </a> | 
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOradorId(<%=unOrador.getId()%>)">
-                                Eliminar
-                            </button>
-                        </td>
-                    </tr>
+                        <% List<Orador> oradores = (List<Orador>)request.getAttribute("lista"); %>
+                        <% System.out.println("Oradores en JSP: " + oradores); %>
+                        <% for( Orador  unOrador : oradores) { %>
+                        <tr>
+                            <th scope="row"><%=unOrador.getId()%></th>
+                            <td><%=unOrador.getNombre() %></td>
+                            <td><%=unOrador.getApellido() %></td>
+                            <td><%=unOrador.getTema() %></td>
+                            <td><a class="btn btn-info" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id=<%=unOrador.getId()%>">
+                                    Editar
+                                </a> | 
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOradorId(<%=unOrador.getId()%>)">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
                        <% } %>
                     </tbody>
                   </table>

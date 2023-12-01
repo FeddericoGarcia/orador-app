@@ -31,7 +31,7 @@ public class FindAllOradorController  extends HttpServlet {
             System.out.println("**************");
             System.out.println("Se detecto error en FindAllOradorController.java");
         }
-        req.setAttribute("id_oradores", oradores);
+        req.setAttribute("lista", oradores);
         getServletContext().getRequestDispatcher("/listadoOradores.jsp").forward(req, resp);
 
     }

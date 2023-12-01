@@ -98,8 +98,9 @@ public class DAO implements iDAO{
         String sql = "select * from oradores";
         Statement statement = connection.createStatement();
         ResultSet rSet = statement.executeQuery(sql);
-        
+
         List<Orador> lista = new ArrayList<Orador>();
+       
         while (rSet.next()){
             
             Long id = rSet.getLong("id_orador");
@@ -110,9 +111,11 @@ public class DAO implements iDAO{
             
             Orador ora = new Orador(id, nombre, apellido, email, tema);
             lista.add(ora);
+            //System.out.println("lista2" + lista);
             
         }
         connection.close();
+        System.out.println("lista3" + lista);
         return lista; 
     
     }

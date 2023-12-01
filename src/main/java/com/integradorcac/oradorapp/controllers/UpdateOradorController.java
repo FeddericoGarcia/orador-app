@@ -59,7 +59,7 @@ public class UpdateOradorController extends HttpServlet {
 
     }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("id");
+        String id = req.getParameter("id_orador");
         iDAO dao = new DAO();
         Orador orador = null;
 

@@ -24,11 +24,11 @@
 		                
 		                <form action="<%=request.getContextPath()%>/LoginAdminController" method="POST">
 		                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+                                        <input type="email" class="form-control" id="floatingInput" name="nombre" placeholder="nombre@ejemplo.com" required>
                                         <label for="floatingInput">Correo electronico</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input type="password" class="form-control" id="floatingPassword" placeholder="contraseña">
+                                        <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="contraseña" required>
                                         <label for="floatingPassword">Contrase&ntildea</label>
                                     </div>
 		                    <div class="row justify-content-center">

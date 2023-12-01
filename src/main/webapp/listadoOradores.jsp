@@ -50,7 +50,8 @@
                                 <th scope="col">Tema</th>
                             </tr>
                         </thead>
-                        <% List<Orador> listado = (List<Orador>)request.getAttribute("listado"); %>
+                        <% List<Orador> listado = (List<Orador>)request.getAttribute("lista"); %>
+                        <% System.out.println(listado); %>
                         <tbody>
                             <% if (listado != null) { %>
                                 <% for(Orador  orador : listado) { %>

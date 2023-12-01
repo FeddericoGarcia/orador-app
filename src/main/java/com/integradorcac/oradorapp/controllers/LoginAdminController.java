@@ -14,7 +14,7 @@ public class LoginAdminController  extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             String nombre= req.getParameter("nombre");
             String password = req.getParameter("password");
-
+            
             getServletContext().getRequestDispatcher("/DashboardOradorController").forward(req, resp);
 		
 	}
