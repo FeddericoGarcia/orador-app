@@ -12,26 +12,6 @@
     <link rel="shortcut icon" href="img/codoacodo-min.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/index.css" rel="stylesheet">
-    <style>
-        body{
-            height:100vh;
-            display: grid;
-            grid-template-rows: 10% 75% 15%;
-            grid-template-areas: "header"
-                                 "main"
-                                 "footer";  
-        }
-        header{
-            grid-area: header;
-        }
-        main{
-            grid-area: main;
-            overflow: auto;
-        }
-        footer{
-            grid-area: footer;
-        }
-    </style>
 </head>
 <body>
     

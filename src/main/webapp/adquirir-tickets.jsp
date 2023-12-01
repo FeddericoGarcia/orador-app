@@ -130,11 +130,11 @@
                     </div>
 
                     <div class="col-12 btn-group">
-                      <div class="col-md-6">
+                      <div class="col-6">
                         <button class="w-100 btn btn-success btn-lg" type="reset"
                         id="btn_delete">Borrar</button>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-6">
                         <button class="w-100 btn btn-success btn-lg" type="button" 
                         id="btn_resm">Resumen</button>  
                       </div>

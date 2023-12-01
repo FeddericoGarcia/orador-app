@@ -10,6 +10,13 @@
     <link href="css/index.css" rel="stylesheet">
     <link href="css/input-form.css" rel="stylesheet">
     </head>
+    <style>
+        footer {
+            width: 100%;
+            position:fixed;
+            bottom:0px;
+        }
+    </style>
 <body>
     
     <jsp:include page="components/header.jsp"/>
