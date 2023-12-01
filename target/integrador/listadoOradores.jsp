@@ -11,26 +11,12 @@
         <link rel="shortcut icon" href="img/codoacodo-min.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="css/index.css" rel="stylesheet">
-        <style>
-            body{
-                height:100vh;
-                display: grid;
-                grid-template-rows: 10% 75% 15%;
-                grid-template-areas: "header"
-                                     "main"
-                                     "footer";  
-            }
-            header{
-                grid-area: header;
-            }
-            main{
-                grid-area: main;
-                overflow: auto;
-            }
-            footer{
-                grid-area: footer;
-            }
-        </style>
+    <style>
+        body{
+            height:100vh; 
+        }
+
+    </style>
     </head>
     <body>
 
@@ -38,7 +24,7 @@
 
         <main>
             <section class="container mt-5 mb-4" id="restoOradores">
-                <h2 class="titulo-gral">Conoce todos los oradores que se presentan</h2>
+                <h2 class="titulo-gral mt-5">Conoce todos los oradores que se presentan</h2>
                 <div class="row">
                     <table class="table">
                         <thead>
@@ -46,8 +32,8 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>
-                                <th scope="col">Email</th>
                                 <th scope="col">Tema</th>
+                                <th scope="col">Email</th>
                             </tr>
                         </thead>
                         <% List<Orador> listado = (List<Orador>)request.getAttribute("lista"); %>
@@ -59,8 +45,8 @@
                                     <th scope="row"><%=orador.getId()%></th>
                                     <td><%=orador.getNombre() %></td>
                                     <td><%=orador.getApellido() %></td>
-                                    <td><%=orador.getMail() %></td>
                                     <td><%=orador.getTema() %></td>
+                                    <td><%=orador.getMail() %></td>
                                 </tr>
                                 <% } %>
                             <% } else { %>
