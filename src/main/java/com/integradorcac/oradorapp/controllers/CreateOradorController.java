@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet("/CreateOradorController")
@@ -49,7 +50,7 @@ public class CreateOradorController extends HttpServlet {
         Orador orador;
         
         orador = new Orador(nombre, apellido, email, tema);
-        
+        System.out.println("Orador desde CreatOradorController.java" + orador);
         try{
             dao.create(orador); 
             req.setAttribute("success", List.of("Alta de Orador exitosa"));

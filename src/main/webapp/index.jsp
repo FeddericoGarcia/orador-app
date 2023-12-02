@@ -39,7 +39,7 @@
                             y a los oradores de primer nivel que tenemos para ti. Te esperamos!
                           </p>
                           <div class="d-flex justify-content-end">
-                            <p><a class="btn btn-lg btn btn-outline-light" href="#form">Quiero ser orador</a></p>
+                            <p><a class="btn btn-lg btn-outline-light" href="#form">Quiero ser orador</a></p>
                             <p><a class="btn btn-lg btn-success ms-2" href="adquirir-tickets.jsp">Comprar tickets</a></p>  
                           </div>
                         </div>
@@ -62,7 +62,7 @@
                             y a los oradores de primer nivel que tenemos para ti. Te esperamos!
                           </p>
                           <div class="d-flex justify-content-end">
-                            <p><a class="btn btn-lg btn btn-outline-light" href="#form">Quiero ser orador</a></p>
+                            <p><a class="btn btn-lg btn-outline-light" href="#form">Quiero ser orador</a></p>
                             <p><a class="btn btn-lg btn-success ms-2" href="adquirir-tickets.jsp">Comprar tickets</a></p>  
                           </div>
                         </div>
@@ -85,7 +85,7 @@
                             y a los oradores de primer nivel que tenemos para ti. Te esperamos!
                           </p>
                           <div class="d-flex justify-content-end">
-                            <p><a class="btn btn-lg btn btn-outline-light" href="#form">Quiero ser orador</a></p>
+                            <p><a class="btn btn-lg btn-outline-light" href="#form">Quiero ser orador</a></p>
                             <p><a class="btn btn-lg btn-success ms-2" href="adquirir-tickets.jsp">Comprar tickets</a></p>  
                           </div>
                         </div>

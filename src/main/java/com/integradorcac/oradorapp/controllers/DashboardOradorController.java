@@ -32,8 +32,12 @@ public class DashboardOradorController extends HttpServlet  {
             System.out.println("*************");
             System.out.println("Se detecto un error en DashboardOradorController.java");
         }
-        req.setAttribute("lista", lista);
-        System.out.println("lista desde controller" + lista);
+//        if (lista != null) {
+//            req.setAttribute("lista", lista);
+//        } else {
+//            System.out.println("lista nulla "+ lista);
+//        }
+        req.setAttribute("orador", lista);
         getServletContext().getRequestDispatcher("/dashboard.jsp").forward(req, resp);
     
     }

@@ -17,6 +17,7 @@ public class Orador {
         this.mail = mail;
         this.tema = tema;
     }
+    
     public Orador(String nombre, String apellido, String mail, String tema) {
         this.nombre = nombre;
         this.apellido = apellido;

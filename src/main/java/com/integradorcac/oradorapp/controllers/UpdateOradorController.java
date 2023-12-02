@@ -46,7 +46,8 @@ public class UpdateOradorController extends HttpServlet {
 
         iDAO dao = new DAO();
         Orador orador = new Orador(Long.parseLong(id),nombre,apellido,mail,tema);
-        
+        System.out.println("errores UpdateCon " + errores);
+        System.out.println("orador UpdateCon " + orador);
         try { 
             dao.update(orador);
             req.setAttribute("orador", List.of("Orador id:" + orador.getId() + " actualizado correctamente"));
@@ -66,11 +67,12 @@ public class UpdateOradorController extends HttpServlet {
         Orador orador = null;
 
         try {
-            orador = dao.findById(Long.parseLong(id));
-            System.out.println("OK UpdateOradorController.java");
+            orador = dao.findById(Long.valueOf(id));
+            System.out.println("orador desde updatecontroller"+ orador);
         } catch (Exception e) {
-            e.printStackTrace();
             System.out.println("*************");
+            e.getLocalizedMessage();
+            e.printStackTrace();
             System.out.println("Se detecto un error en doGet UpdateOradorController.java");
         }
 

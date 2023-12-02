@@ -32,8 +32,8 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <% List<Orador> oradores = (List<Orador>)request.getAttribute("lista"); %>
-                        <% System.out.println("Oradores en JSP: " + oradores); %>
+                        <% List<Orador> oradores = (List<Orador>)request.getAttribute("orador"); %>
+                        <% System.out.println("Oradores en dashboard.JSP: " + oradores); %>
                         <% for( Orador  unOrador : oradores) { %>
                         <tr>
                             <th scope="row"><%=unOrador.getId()%></th>
@@ -41,7 +41,7 @@
                             <td><%=unOrador.getApellido() %></td>
                             <td><%=unOrador.getTema() %></td>
                             <td>
-                                <a class="btn btn-info m-2" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id=<%=unOrador.getId()%>"> Editar </a>
+                                <a class="btn btn-info m-2" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id_orador=<%=unOrador.getId()%>"> Editar </a>
                                 <button type="button m-2" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOradorId(<%=unOrador.getId()%>)"> Eliminar </button>
                             </td>
                         </tr>

@@ -30,7 +30,9 @@ public class DAO implements iDAO{
         ResultSet rSet = statement.getGeneratedKeys();
         
         if(rSet.next()){
-            System.out.println("Orador creado exitosamente ✔");
+            System.out.println("Orador creado exitosamente");
+        } else {
+            System.out.println("Orador NO creado (DAO)");
         }
 
         connection.close();
@@ -46,6 +48,7 @@ public class DAO implements iDAO{
         statement.setString(2,orador.getApellido());
         statement.setString(3,orador.getMail());
         statement.setString(4,orador.getTema());
+        statement.setLong(5, orador.getId());
         statement.execute();
         
         connection.close();
@@ -54,24 +57,28 @@ public class DAO implements iDAO{
 
     @Override
     public Orador findById(Long id) throws Exception {
-        String name, lastname, email, topic;
         Connection connection = ManagerDB.getConnection();
-        String sql = "select * from oradores where id_orador = " + id;
-        Statement statement = connection.createStatement();
-        ResultSet rSet = statement.executeQuery(sql);
-        
-        if(rSet.next()){
-            Long id_orador = rSet.getLong("id_orador");
-            name = rSet.getString("nombre");
-            lastname = rSet.getString("apellido");
-            email = rSet.getString("email");
-            topic = rSet.getString("tema");
-            
-            Orador orador = new Orador(id_orador, name, lastname, email, topic);
+        String sql = "SELECT * FROM oradores WHERE id_orador = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setLong(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                String nombre = resultSet.getString("nombre");
+                String apellido = resultSet.getString("apellido");
+                String email = resultSet.getString("email");
+                String tema = resultSet.getString("tema");
+                
+                return new Orador(id, nombre, apellido, email, tema);
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Error desde DAO findByID");
+        }finally {
+            connection.close();
         }
-        connection.close();
-        return null;      
-        
+        return null;
     }
 
     @Override
@@ -111,11 +118,10 @@ public class DAO implements iDAO{
             
             Orador ora = new Orador(id, nombre, apellido, email, tema);
             lista.add(ora);
-            //System.out.println("lista2" + lista);
             
         }
         connection.close();
-        System.out.println("lista3" + lista);
+        System.out.println("lista desde DAO " + lista);
         return lista; 
     
     }
