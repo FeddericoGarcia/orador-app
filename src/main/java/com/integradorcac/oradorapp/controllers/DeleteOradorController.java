@@ -18,19 +18,18 @@ public class DeleteOradorController extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Long id_orador = Long.parseLong(req.getParameter("id_orador"));
+        Long id_orador = Long.parseLong(req.getParameter("id"));
         iDAO dao = new DAO();
-        
+        System.out.println("ID_ORADOR DeleteController "+ id_orador);
         try{
             dao.delete(id_orador);
-            req.setAttribute("success", List.of("Se elimino el orador ID: "+ id_orador + " ✔"));
-           
+            req.setAttribute("orador", List.of("Se elimino el orador ID: "+ id_orador + " ✔"));
         }catch(Exception e){
-            System.out.println("❌ Surgió un error al eliminar orador ID " + id_orador + " ❌");
             e.getMessage();
-            e.getLocalizedMessage();
-            e.getStackTrace();
+            e.printStackTrace();
+            System.out.println("❌ Surgió un error al eliminar orador ID " + id_orador + " ❌");
         }
+        
         getServletContext().getRequestDispatcher("/DashboardOradorController").forward(req, resp);
   
     }

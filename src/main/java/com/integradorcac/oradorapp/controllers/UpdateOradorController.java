@@ -40,22 +40,20 @@ public class UpdateOradorController extends HttpServlet {
         }
         if(!errores.isEmpty()) {
             req.setAttribute("error", errores);
+            System.out.println("errores UpdateCon " + errores);
             getServletContext().getRequestDispatcher("/dashboard.jsp").forward(req, resp);
             return;
         }
 
         iDAO dao = new DAO();
         Orador orador = new Orador(Long.parseLong(id),nombre,apellido,mail,tema);
-        System.out.println("errores UpdateCon " + errores);
-        System.out.println("orador UpdateCon " + orador);
+
         try { 
             dao.update(orador);
             req.setAttribute("orador", List.of("Orador id:" + orador.getId() + " actualizado correctamente"));
         } catch (Exception e) {
             e.printStackTrace();
             req.setAttribute("error", List.of("Error actualizando Orador<" + e.getMessage()));
-            System.out.println("*************");
-            System.out.println("Se detecto un error en doPost UpdateOradorController.java");
         }
 
         getServletContext().getRequestDispatcher("/DashboardOradorController").forward(req, resp);
@@ -68,12 +66,9 @@ public class UpdateOradorController extends HttpServlet {
 
         try {
             orador = dao.findById(Long.valueOf(id));
-            System.out.println("orador desde updatecontroller"+ orador);
         } catch (Exception e) {
-            System.out.println("*************");
             e.getLocalizedMessage();
             e.printStackTrace();
-            System.out.println("Se detecto un error en doGet UpdateOradorController.java");
         }
 
         req.setAttribute("orador", orador);

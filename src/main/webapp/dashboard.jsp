@@ -29,6 +29,8 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
                         <th scope="col">Tema</th>
+                        <th scope="col">Email</th>
+                        <th scope="col"></th><!--Columna para botones -->
                       </tr>
                     </thead>
                     <tbody>
@@ -40,6 +42,7 @@
                             <td><%=unOrador.getNombre() %></td>
                             <td><%=unOrador.getApellido() %></td>
                             <td><%=unOrador.getTema() %></td>
+                            <td><%=unOrador.getMail() %></td>
                             <td>
                                 <a class="btn btn-info m-2" role="button" href="<%=request.getContextPath()%>/UpdateOradorController?id_orador=<%=unOrador.getId()%>"> Editar </a>
                                 <button type="button m-2" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="setOradorId(<%=unOrador.getId()%>)"> Eliminar </button>
@@ -57,14 +60,14 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-            <form action="<%=request.getContextPath()%>/DeleteOradorController">
-              <input type="hidden" name="idOrador" id="idOrador">
+            <form action="<%=request.getContextPath()%>/DeleteOradorController" >
+              <input type="hidden" name="id" id="id">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Dar de baja Orador</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Orador</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    ¿Confirma que desea eliminar? 
+                      ¿Estas seguro que deseas eliminar el Orador?
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -79,5 +82,10 @@
     
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        function setOradorId(id) {
+                document.getElementById('id').value=id;
+        }
+    </script>
 </body>
 </html>

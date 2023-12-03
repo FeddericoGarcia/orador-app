@@ -59,7 +59,7 @@
                             </div>
                             <div class="row">
                                 <div class="col mb-3">
-                                    <input type="email" class="form-control" name="mail" placeholder="Email" aria-label="Email"
+                                    <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email"
                                     value="<%=orador.getMail()%>" required>
                                 </div>
                             </div>

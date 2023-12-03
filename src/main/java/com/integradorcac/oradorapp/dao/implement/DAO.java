@@ -49,10 +49,16 @@ public class DAO implements iDAO{
         statement.setString(3,orador.getMail());
         statement.setString(4,orador.getTema());
         statement.setLong(5, orador.getId());
-        statement.execute();
         
-        connection.close();
-       
+        try{
+            statement.execute();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("Error detectado desde UPDATE.");
+        } finally{
+            connection.close();    
+        }
+
     }
 
     @Override
@@ -132,8 +138,15 @@ public class DAO implements iDAO{
         Connection connection = ManagerDB.getConnection();
         String sql = "delete from oradores where id_orador = "+ id;
         Statement statement = connection.createStatement();
-        statement.executeUpdate(sql);
-        connection.close();        
+ 
+        try{
+            statement.executeUpdate(sql);
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Se detecto un error en DELETE.DAO");
+        } finally {
+            connection.close(); 
+        }
         
     }
 
