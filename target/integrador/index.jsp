@@ -215,8 +215,8 @@
                       </div>
 
                       <p><small># Recuerda incluir un título para tu charla.</small></p>
-                      <div class="btn-group col-12">
-                        <button class="w-100 btn btn-success btn-lg" type="submit">Enviar</button>
+                      <div class="col-12">
+                        <button class="btn btn-success btn-lg w-100" type="submit">Enviar</button>
                       </div>                
                   </form>
                 </div>

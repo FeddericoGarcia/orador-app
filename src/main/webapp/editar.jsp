@@ -11,36 +11,21 @@
         <link rel="shortcut icon" href="img/codoacodo-min.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="css/index.css" rel="stylesheet">
-        <style>
-            body{
-                height:100vh;
-                display: grid;
-                grid-template-rows: 10% 75% 15%;
-                grid-template-areas: "header"
-                                     "main"
-                                     "footer";  
-            }
-            header{
-                grid-area: header;
-            }
-            main{
-                grid-area: main;
-                overflow: auto;
-            }
-            footer{
-                grid-area: footer;
-            }
-        </style>
+        <link href="css/input-form.css" rel="stylesheet">
     </head>
     <body>
 
         <jsp:include page="components/header.jsp"/>
 
         <main class="mb-5">
-            <section class="container mt-5" id="form-orador">
+            <section class="container mt-5">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <h2 class="titulo-gral">Modificar datos del Orador</h2>
+                    <div class="col-lg-8 col-xl-7 mt-5">
+                        <h2 class="titulo-h2 p-3 text-center">Modificar datos del 
+                            <span style="font-size: 1em!important; color: #FFF; text-shadow: 0 0 6px #000;">
+                                ORADOR
+                            </span> 
+                        </h2>
                         
                         <% Orador orador = (Orador)request.getAttribute("orador"); %>
                         <% System.out.println("orador desde editar.jsp " + orador); %>
@@ -67,8 +52,8 @@
                                 <div class="col mb-3">
                                     <textarea class="form-control" name="tema" id="exampleFormControlTextarea1" rows="4" placeholder="<%=orador.getTema()%>"  required > <%=orador.getTema()%> </textarea>
                                     <div id="emailHelp" class="form-text mb-3">Recuerda incluir un título para tu charla.</div>
-                                    <div class="d-grid">
-                                        <button type="submit" class="btn btn-lg btn-success ms-2">Modificar</button>
+                                    <div>
+                                        <button type="submit" class="btn btn-lg btn-success w-100">Modificar</button>
                                     </div>
                                 </div>
                             </div>

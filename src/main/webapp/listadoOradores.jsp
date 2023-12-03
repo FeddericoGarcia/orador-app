@@ -18,7 +18,12 @@
 
         <main>
             <section class="container mt-5 mb-4" id="restoOradores">
-                <h2 class="titulo-gral mt-4">Conoce todos los oradores que se presentan</h2>
+                <h2 class="titulo-h2 mt-2 p-3 text-center">Conocé a todos los 
+                    <span style="font-size: 1em!important; color: #FFF; text-shadow: 0 0 6px #000;">
+                        ORADORES
+                    </span> 
+                    que se presentan
+                </h2>
                 <div class="row">
                     <table class="table">
                         <thead>

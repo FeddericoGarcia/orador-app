@@ -48,7 +48,7 @@ header span{
     color: var(--color-green-primary)!important;
     text-shadow: 0px 0px 1px #CCC7, 0px 0px 12px #000;
     border-radius: 10px;
-    transition: border .2s ease-in;
+    transition: color .2s ease-in;
 }
 .btn-prim::befor{
     border-radius: 10px;
@@ -151,7 +151,7 @@ header span{
 
 /***** FORM ADQUIRIR TICKETS *****/
 
-#form-orador{
+#form-orador, #form-orador{
     height: 92vh;
     width: 100vw;
     overflow: hidden;
