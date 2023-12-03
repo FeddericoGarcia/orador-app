@@ -199,7 +199,7 @@
 
                       <div class="col-12">
                         <label for="email" class="form-label">Correo</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="ejemplo@gmail.com">
+                        <input type="email" class="form-control" name="email" id="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="ejemplo@gmail.com">
                         <div class="invalid-feedback">
                           No te olvides de completar los campos.
                         </div>
