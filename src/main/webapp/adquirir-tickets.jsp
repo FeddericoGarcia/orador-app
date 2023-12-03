@@ -131,18 +131,15 @@
 
                     <div class="col-12 btn-group">
                       <div class="col-6">
-                        <button class="w-100 btn btn-success btn-lg" type="reset"
-                        id="btn_delete">Borrar</button>
+                        <button class="w-100 btn btn-success btn-lg" type="reset" id="btn_delete">Borrar</button>
                       </div>
                       <div class="col-6">
-                        <button class="w-100 btn btn-success btn-lg" type="button" 
-                        id="btn_resm">Resumen</button>  
+                        <button class="w-100 btn btn-success btn-lg" type="button" id="btn_resm">Resumen</button>  
                       </div>
                        
                     </div>    
                     <div class="col-md-12 w-100">
-                      <button class="w-100 btn btn-success btn-lg" type="submit" 
-                      id="btn_resm">Comprar</button>  
+                        <a href="pagos360.html"> <button class="w-100 btn btn-success btn-lg" type="submit" id="btn_resm">Comprar</button></a> 
                     </div>
                   </div>            
                 </form>

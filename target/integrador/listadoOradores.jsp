@@ -18,7 +18,7 @@
 
         <main>
             <section class="container mt-5 mb-4" id="restoOradores">
-                <h2 class="titulo-gral mt-5">Conoce todos los oradores que se presentan</h2>
+                <h2 class="titulo-gral mt-4">Conoce todos los oradores que se presentan</h2>
                 <div class="row">
                     <table class="table">
                         <thead>
@@ -27,7 +27,6 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>
                                 <th scope="col">Tema</th>
-                                <th scope="col">Email</th>
                             </tr>
                         </thead>
                         <% List<Orador> listado = (List<Orador>)request.getAttribute("lista"); %>
@@ -40,7 +39,6 @@
                                     <td><%=orador.getNombre() %></td>
                                     <td><%=orador.getApellido() %></td>
                                     <td><%=orador.getTema() %></td>
-                                    <td><%=orador.getMail() %></td>
                                 </tr>
                                 <% } %>
                             <% } else { %>

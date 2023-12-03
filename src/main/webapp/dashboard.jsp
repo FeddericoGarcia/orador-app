@@ -19,7 +19,7 @@
 
     <main>
         <section class="container mt-5 mb-4" id="restoOradores">
-            <h2 class="titulo-gral">Conoce todos los oradores que se presentan</h2>
+            <h2 class="titulo-gral">Conoce todos los ORADORES que se presentan</h2>
 
             <div class="row">
                 <table class="table">
@@ -35,7 +35,6 @@
                     </thead>
                     <tbody>
                         <% List<Orador> oradores = (List<Orador>)request.getAttribute("orador"); %>
-                        <% System.out.println("Oradores en dashboard.JSP: " + oradores); %>
                         <% for( Orador  unOrador : oradores) { %>
                         <tr>
                             <th scope="row"><%=unOrador.getId()%></th>
