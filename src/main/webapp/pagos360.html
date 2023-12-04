@@ -14,24 +14,33 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 100vw;
             background-color: #f4f4f4;
+            background: url(img/bg-paymant-green.png);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .checkout-container {
-            max-width: 900px;
+            min-width: 480px;
             width: 100%;
             height: 542px;
             background-color: #fff;
-            padding: 50px;
+            padding: 65px;
+            margin-left: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 14px;
             position: relative;
             display:flex;
             align-items: center;
             justify-content: center;
-            
-            
+           
         }
+        
+        form{
+            padding-top: 80px;
+        }
+        
         .header-form{
             background: #198754;
             height: 56px;
@@ -52,10 +61,10 @@
         }
         
         .header-form p {
-            color: #333!important;
-            font-size: 1.1em;
             text-align: center!important;
-            position: relative;
+            position: inherit;
+            left: 91px;
+            top: 14px;
         }
 
         label {
@@ -89,13 +98,13 @@
             padding: 12px;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 85%;
             border-radius: 4px;
             font-size: 16px;
         }
 
         button:hover {
-            background-color: #45a049;
+            opactity: .7;
         }
 
         .company-details {
@@ -122,9 +131,10 @@
         }
         #montoPagar{
             font-size: 2.3em; 
-            padding: 10px 0 60px 0;
+            padding: 15px 12px 60px 0;
             display: flex;
             overflow: hidden;
+            color: #198754;
         }
     </style>
 </head>
@@ -137,22 +147,20 @@
                         <p class="header-form-p text-center">Ingresa los datos de la tarjeta</p>
                     </div>
                     <form>
-                        
-
                         <div class="form-row d-flex justify-content-center align-content-center">
                             <div class="form-group col-md-4">
                                 <label for="card-number">N° de Tarjeta:</label>
-                                <input type="text" id="card-number" name="card-number" placeholder="**** **** **** ****" required>
+                                <input type="number" id="card-number" name="card-number" placeholder="**** **** **** ****" required>
                             </div>
                             
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 pl-4">
                                 <label for="cvv">CVV:</label>
-                                <input type="text" id="cvv" name="cvv" placeholder="***" required>
+                                <input type="password" id="cvv" name="cvv" placeholder="***" style="width: 60px;" required>
                             </div>                            
 
                             <div class="form-group col-md-4">
                                 <label for="expiration-date">Vencimiento: </label>
-                                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/AA" required>
+                                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/AA" style="padding: 10px;" required>
                             </div>
                         </div>
 
@@ -182,19 +190,26 @@
 
                         <p class="text-center mt-5"><small>Al pagar aceptás los <a href="#">términos y condiciones</a> de PAGOS36O</small></p>
                     </form>
-                    
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="company-details d-flex flex-column justify-content-center">
+                    <img src="img/codoacodo-min.png" alt="Logo de empresa para la compra de entradas" style="width: 200px; height: auto;"/>
                     <h3 class="text-center">CONFERENCIA BS AS</h3>
-                    <p class="text-center">Pago de documento: <strong><br></strong>Recibo De Pago Nro.71750332</p>
+                    <p class="text-center" style="font-size: .9em;">Pago de documento: <strong><br></strong>Recibo De Pago Nro.71750332</p>
                     <p class="text-center"><strong><span id="montoPagar">$</span></strong></p>
                     <button type="button">PAGAR</button>
                     <p class="align-end">Procesado por Pagos36O </p>
                 </div>
             </div>
+        </div>
+        <div style="position: absolute; right: 150px; top:40px; z-index: 20; background: #198754!important;">
+            <a href="index.jsp" class="btn btn-lg btn-success">
+                <span>
+                    Atras
+                </span>
+            </a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
