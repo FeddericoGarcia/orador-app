@@ -18,18 +18,44 @@
         }
 
         .checkout-container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
+            height: 542px;
             background-color: #fff;
-            padding: 20px;
+            padding: 50px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            position: relative;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
             
         }
+        .header-form{
+            background: #198754;
+            height: 56px;
+            width: 100%!important;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            z-index: 17;
+            background-color: #5b6fac;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+        }
         
-        h2 {
-            color: #333;
-            text-align: center;
+        .header-form p {
+            color: #333!important;
+            font-size: 1.1em;
+            text-align: center!important;
+            position: relative;
         }
 
         label {
@@ -43,18 +69,22 @@
             padding: 10px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: none;
+            border-bottom: 1px solid #CCC;
             font-size: 14px;
             transition: border-color 1s
+
         }
         
         input:hover {
             border-color: #198754;
         }
+        input:focus{
+            outline-color: #198754;
+        }
 
         button {
-            background-color: #4caf50;
+            background: #198754;
             color: #fff;
             padding: 12px;
             border: none;
@@ -69,44 +99,67 @@
         }
 
         .company-details {
-            background-color: #f8f9fa;
+            background: rgb(250, 250, 250);
             padding: 20px;
             border-radius: 8px;
             margin-left: 20px;
+            height: 542px;
+            width: 75%;
+            align-items: center;
+            position: relative;
         }
 
         .company-details h3 {
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 15px; 
+            height: 150px;
+            width: 80%;
+            
+        }
+        .company-details p:last-child{
+            padding-top: 30px;
+            font-size: .7em;
+        }
+        #montoPagar{
+            font-size: 2.3em; 
+            padding: 10px 0 60px 0;
+            display: flex;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <div class="container-fluid d-flex">
-        <div class="row  justify-content-between">
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="row">
             <div class="col-md-6 ">
-                <div class="checkout-container w-75">
-                    <h2>Checkout</h2>
+                <div class="checkout-container">
+                    <div class="header-form" style="background: rgb(0, 109, 89);">
+                        <p class="header-form-p text-center">Ingresa los datos de la tarjeta</p>
+                    </div>
                     <form>
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+                        
 
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="card-number">Número de tarjeta:</label>
+                        <div class="form-row d-flex justify-content-center align-content-center">
+                            <div class="form-group col-md-4">
+                                <label for="card-number">N° de Tarjeta:</label>
                                 <input type="text" id="card-number" name="card-number" placeholder="**** **** **** ****" required>
                             </div>
+                            
+                            <div class="form-group col-md-4">
+                                <label for="cvv">CVV:</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="***" required>
+                            </div>                            
 
-                            <div class="form-group col-md-6">
-                                <label for="expiration-date">Fecha de caducidad:</label>
+                            <div class="form-group col-md-4">
+                                <label for="expiration-date">Vencimiento: </label>
                                 <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/AA" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="cvv">CVV:</label>
-                                <input type="text" id="cvv" name="cvv" placeholder="***" required>
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
                             </div>
 
                             <div class="form-group col-md-6">
@@ -127,19 +180,19 @@
                             </div>
                         </div>
 
-                        
+                        <p class="text-center mt-5"><small>Al pagar aceptás los <a href="#">términos y condiciones</a> de PAGOS36O</small></p>
                     </form>
+                    
                 </div>
             </div>
 
             <div class="col-md-6">
-                <div class="company-details w-75">
-                    <h3>Datos de la Empresa</h3>
-                    <p><strong>Nombre:</strong> Empresa ABC</p>
-                    <p><strong>Dirección:</strong> Calle Ficticia 123</p>
-                    <p><strong>CI:</strong> 123456789</p>
-                    <p><strong>Monto a Facturarse:</strong> $500.00</p>
-                    <button type="button">Pagar</button>
+                <div class="company-details d-flex flex-column justify-content-center">
+                    <h3 class="text-center">CONFERENCIA BS AS</h3>
+                    <p class="text-center">Pago de documento: <strong><br></strong>Recibo De Pago Nro.71750332</p>
+                    <p class="text-center"><strong><span id="montoPagar">$</span></strong></p>
+                    <button type="button">PAGAR</button>
+                    <p class="align-end">Procesado por Pagos36O </p>
                 </div>
             </div>
         </div>
@@ -147,5 +200,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/pagos360.js"></script>
 </body>
 </html>

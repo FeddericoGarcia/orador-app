@@ -12,6 +12,8 @@ let email = document.getElementById("email");
 let pagarTotal = document.getElementById("pagarTotal");
 let btn_delete = document.getElementById("btn_delete");
 let btn_resm = document.getElementById("btn_resm");
+let btn_comprar = document.getElementById("btn_comprar");
+
 
 //Limpiar inputs
 btn_delete.addEventListener('click', ()=>{
@@ -27,11 +29,12 @@ btn_delete.addEventListener('click', ()=>{
 btn_resm.addEventListener('click', ()=>{
     let cantTicket = document.getElementById("cantTicket").value;
     let categTicket = document.getElementById("categTicket").value;
+    let montoTotal = (cantTicket * VALOR_TKT);
     if(!validation(cantTicket, categTicket)){
-        categTicket == 1 ? pagarTotal.innerHTML = `${(cantTicket * VALOR_TKT) - (DESC_EST / 100 * (cantTicket * VALOR_TKT))}` : 0
-        categTicket == 2 ? pagarTotal.innerHTML = `${(cantTicket * VALOR_TKT) - (DESC_TRA / 100 * (cantTicket * VALOR_TKT))}` : 0
-        categTicket == 3 ? pagarTotal.innerHTML = `${(cantTicket * VALOR_TKT) - (DESC_JUN / 100 * (cantTicket * VALOR_TKT))}` : 0
-        categTicket == 4 ? pagarTotal.innerHTML = `${(cantTicket * VALOR_TKT)}` : 0;
+        categTicket == 1 ? pagarTotal.innerHTML = `${montoTotal - (DESC_EST / 100 * montoTotal)}` : 0;
+        categTicket == 2 ? pagarTotal.innerHTML = `${montoTotal - (DESC_TRA / 100 * montoTotal)}` : 0;
+        categTicket == 3 ? pagarTotal.innerHTML = `${montoTotal - (DESC_JUN / 100 * montoTotal)}` : 0;
+        categTicket == 4 ? pagarTotal.innerHTML = `${montoTotal}` : 0;
     
     };
 });
@@ -79,4 +82,26 @@ function validation(cantTicket, categTicket){
 
     }
     
+// Redireccionamiento a página de cobranza
+btn_comprar.addEventListener('click', function () {
+        let monto = obtenerMonto();
+        window.location.href = "pagos360.html?monto=" + encodeURIComponent(monto);
+    });
+    
+function obtenerMonto() {
+    let cantTicket = document.getElementById("cantTicket").value;
+    let categTicket = document.getElementById("categTicket").value;
+    let montoTotal = (cantTicket * categTicket);
+    
+    if(!validation(cantTicket, categTicket)){
+        categTicket == 1 ? montoTotal = montoTotal - (DESC_EST / 100 * montoTotal) : 0;
+        categTicket == 2 ? montoTotal = montoTotal - (DESC_TRA / 100 * montoTotal) : 0;
+        categTicket == 3 ? montoTotal = montoTotal - (DESC_JUN / 100 * montoTotal) : 0;
+        categTicket == 4 ? montoTotal = montoTotal : 0;
+    
+    };
+    console.log(montoTotal);
+    return montoTotal; 
+}
+
 });

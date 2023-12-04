@@ -140,7 +140,7 @@
                        
                     </div>    
                     <div class="col-md-12 w-100">
-                        <a href="pagos360.html"> <button class="w-100 btn btn-success btn-lg" type="submit" id="btn_comprar">Comprar</button></a> 
+                        <button class="w-100 btn btn-success btn-lg" type="button" id="btn_comprar">Comprar</button>
                     </div>
                   </div>            
                 </form>
